@@ -1,0 +1,35 @@
+package com.example.studentRporting.Domain;
+ 
+public class StudentDAO {
+private String stEnglish;
+private String stMaths;
+private String stScience;
+ 
+private String coursename;
+ 
+public Long getEnglish() {
+return English;
+}
+ 
+public void setEnglish(String English) {
+this.English = English;
+}
+ 
+public String getStMaths() {
+return stMaths;
+}
+ 
+public void setStMaths(String Maths) {
+this.stMaths = stMaths;
+}
+ 
+public String getScience() {
+return stScience;
+}
+ 
+public void setScience(String Science) {
+this.Science = Science;
+}
+ 
+ 
+}

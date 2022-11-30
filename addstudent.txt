@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://subjectMark.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+<script src= "https://courcemkjvnkjmlkxnj.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head>
+<body>
+ 
+<div>
+<h2 >Student Registation</h2>
+<tr>
+<div align = "left" >
+  
+<h3><a  th:href="@{'/Student/addstudent'}">Add new</a></h3>  
+  
+    </div>
+</tr>
+ 
+<div class="col-sm-8" align = "center">
+    <div class="panel-body" align = "center" >
+                
+                
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+       <th>Student Name</th>
+            <th>English</th>
+            <th>Maths</th>
+            <th>Science</th>     
+ 
+             <th>edit</th>
+             <th>delete</th>
+   </tr>
+  </thead>
+  <tbody>
+      <tr  th:each="student : ${liststudent}">
+<td th:text="${student.Name}">Student Name</td>
+<td th:text="${student.English}">English</td>
+<td th:text="${student.math}">Math</td>
+<td th:text="${student.Science}">Science</td>
+ 
+<td>
+<a th:href="@{'/Student/edit/' + ${student.Name}}">Edit</a>
+</td>     
+<td>
+<a th:href="@{'/Student/delete/' + ${student.Name}}">Delete</a>
+</td>     
+</tr>
+  
+  </tbody>
+</table>
+ 
+                    
+   </div>
+   </div>
+ 
+</tr>
+ 
+</tbody>
+</table>
+<div>
+</body>
+</html>
